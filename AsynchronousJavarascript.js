@@ -65,6 +65,40 @@
 
 //Promises
 
+// let stocks = {
+//     Fruits : ["mangga", "papaya", "strawberry", "coconut"],
+//     liquid : ["water", "ice"],
+//     holder : ["cone", "cup", "stick"],
+//     toppings : ["chocolate", "peanuts"]
+// }
+
+// let = is_shop_open = true;
+
+// let order = (time, work) => {
+
+//     return new Promise ( (resolve, reject)=> {
+//         if(is_shop_open) {
+//             setTimeout (() => {
+//                 resolve(work())
+
+//             }, time)
+           
+//         }
+//          else {
+//             reject(console.log("shop closed"))
+//         }
+
+//     })
+
+// }
+
+// order (2000, ()=> console.log(`${stocks.Fruits[2]} was selected`))
+// .then()
+// .then()
+// .catch()
+//.finally()
+
+//Async/Await
 let stocks = {
     Fruits : ["mangga", "papaya", "strawberry", "coconut"],
     liquid : ["water", "ice"],
@@ -72,6 +106,34 @@ let stocks = {
     toppings : ["chocolate", "peanuts"]
 }
 
+let = is_shop_open = true;
+
+let toppings_choice = () => {
+
+    return new Promise ( (resolve, reject) => {
+        setTimeout (()=> {
+            resolve(
+                console.log("which topping you want?")
+          )
+        },3000)
+    })
+}
+
+async function kitchen () {
+    console.log("a")
+    console.log("b")
+    console.log("c")
+    await toppings_choice()
+    console.log("d")
+    console.log("e")
+}
+
+kitchen()
+
+console.log ("cleaning the dishes")
+console.log ("cleaning the dishes")
+console.log ("cleaning the dishes")
+ 
 
 
 
